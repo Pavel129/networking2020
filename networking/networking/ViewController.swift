@@ -17,6 +17,11 @@ class ViewController: UIViewController {
 //dsfsd
     //eww
     
+    
+    @IBAction func dowloadPostsDidTap(_ sender: UIButton) {
+    }
+    
+    
 
 }
 
