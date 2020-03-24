@@ -15,21 +15,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ac-Us-AAV">
-                                <rect key="frame" x="45" y="306" width="102" height="30"/>
-                                <state key="normal" title="Dowload Posts"/>
-                                <connections>
-                                    <action selector="dowloadPostsDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zvx-63-Jps"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="taD-Te-Zif">
+                                <rect key="frame" x="156" y="413" width="102" height="80.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Загрузка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hqp-f3-MSU">
+                                        <rect key="frame" x="15.5" y="0.0" width="71.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ac-Us-AAV">
+                                        <rect key="frame" x="0.0" y="50.5" width="102" height="30"/>
+                                        <state key="normal" title="Dowload Posts"/>
+                                        <connections>
+                                            <action selector="dowloadPostsDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zvx-63-Jps"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="1ac-Us-AAV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3wF-3n-OsM"/>
-                            <constraint firstItem="1ac-Us-AAV" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Acu-vC-0kv"/>
+                            <constraint firstItem="taD-Te-Zif" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8xW-8X-1y4"/>
+                            <constraint firstItem="taD-Te-Zif" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="mh6-lN-feu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="Hqp-f3-MSU" id="2Ln-cH-3PP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
